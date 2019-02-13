@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'ngx-footer',
   styleUrls: ['./footer.component.scss'],
   template: `
-    <span class="created-by">&copy;&nbsp;<b>Test D3</b> 2019</span>`,
+    <span class="created-by">Here you can put your footer contents.</span>`,
 })
 export class FooterComponent {
 }
