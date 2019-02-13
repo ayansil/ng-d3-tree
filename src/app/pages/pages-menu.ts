@@ -10,13 +10,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'My Branches',
     icon: 'nb-roller-shades',
-    link: '/pages/branches'
+    link: '/pages/branches',
   },
-
   {
-    title: 'My Customers',
-    icon: 'nb-lightbulb',
-    link: '/pages/customers'
+    title: 'D3 Tree',
+    icon: 'nb-roller-shades',
+    link: '/pages/d3',
   }
-  
+
 ];

@@ -48,6 +48,10 @@ const routes: Routes = [{
     loadChildren: './branches/branches.module#BranchesModule',
   },
   {
+    path: 'd3',
+    loadChildren: './d3/d3.module#D3Module',
+  },
+  {
     path: 'customers',
     loadChildren: './customers/customers.module#CustomersModule',
   },

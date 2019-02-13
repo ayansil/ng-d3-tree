@@ -64,6 +64,36 @@ export class LoginComponent {
 
   login(){
     this.authenticating=true;
+
+    /// following is the mock login
+
+    let data = this.loginService.mockLogin(this.username,this.password);
+    if(data.status){
+      let token=data.data.token;
+          this.cookieService.set('token',token);
+          this.router.navigate(['/pages']);
+
+          this.toastr.success('Please wait we are redirecting you to your dashboard ...','Authentication Successfull !!!',{
+            timeOut: 2000,
+            closeButton:true,
+
+    });
+
+    }
+    else
+    {
+      this.toastr.error('Please check your username and password.','Authentication Failed !!!',{
+              timeOut: 6000,
+              closeButton:true,
+      });
+    }
+    this.authenticating=false;
+
+    /////////////////////////////////////   mock login ends   ///////////////////////////////////////////////////////////
+
+
+    ////// following is the api login ////////////////////////////////////////////
+
     // this.loginService.login(this.username,this.password).subscribe((data:any) => {
     //   if(data.status){
     //     let token=data.data.token;
@@ -83,8 +113,13 @@ export class LoginComponent {
     //       closeButton:true,
     //     });
     //   }
-      this.authenticating=false;
-    });
+    //   this.authenticating=false;
+    // });
+
+
+    ////////////////////  api login ends /////////////////////////////////////////////////////////////////////////////
+
+
     return false;
   }
 

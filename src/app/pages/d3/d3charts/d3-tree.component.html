@@ -1,0 +1,12 @@
+<nb-card>
+  <nb-card-header>
+    D3 Tree
+  </nb-card-header>
+
+  <nb-card-body>
+    <s2w-angular-d3-tree-lib
+  [(treeData)]="data"
+  (onNodeChanged)="nodeUpdated($event)"
+  (onNodeSelected)="nodeSelected($event)"></s2w-angular-d3-tree-lib>
+  </nb-card-body>
+</nb-card>

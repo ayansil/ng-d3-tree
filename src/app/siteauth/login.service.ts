@@ -32,9 +32,9 @@ export class LoginService {
   }
   mockLogin(username:string,password:string){
     if (username === 'admin' && password === 'admin') {
-      return {"status":1,data:{token:12345}};
+      return {'status': 1, 'data': { 'token': '12345'}};
     }else{
-      return {"status":0,data:{username:username,password:password}};
+      return {'status': 0, 'data': {'username': username, 'password': password}};
     }
   }
 
